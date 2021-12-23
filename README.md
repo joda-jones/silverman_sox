@@ -1,49 +1,50 @@
-
-
-
+#BackTest
+各通貨ペアにおける､silverman_soxの最適化キャッシュファイルとXMLファイル｡
+遺伝的最適化による最適パラメータが記載されている｡
+最適化結果を見てパラメータを選定し､CSaryに記述していく｡
 
 # silverman_sox
 MQL5を利用した自動売買システム｡
 マルチパラメータ､マルチタイムフレーム､マルチ通貨ペア対応｡
 SARを利用したトレンドフォロー用ロジック｡
 
-# CCandle_open.mqh
+### CCandle_open.mqh
 ロウソク足の切り替わりのタイミングを取得できるクラス｡
 オブジェクト配列を作成して､マルチパラメータに対応｡
 
-# CDiscord.mqh
+### CDiscord.mqh
 ディスコードにメッセージを送信するするクラス｡
 取引の発生や残高の定期通知を行う｡
 
-# CSilverman_sox.mqh
+### CSilverman_sox.mqh
 EAのパラメータ､外部変数を定義しておくクラス｡
 これを作っておくことで､マルチパラメータでの運用が可能になる｡
 
-# CSary.mqh
+### CSary.mqh
 CSilverman_soxのオブジェクト配列を操作するクラス｡
 各パラメータを保存しておく｡
 
-# C_ea_base.mqh
+### C_ea_base.mqh
 EAでよく使う機能をまとめたベースクラス｡
 取引禁止時間､最終決済タイミング､最終エントリータイミング等｡
 
-# MyOrders.mqh
+### MyOrders.mqh
 エラー処理つきエントリー関数｡
 エラーにより注文に失敗した際､指定された回数､リトライする｡
 
-# Pos_info_ver1.03.mqh
+### Pos_info_ver1.03.mqh
 複雑なポジション情報を取得するクラス｡
 トレーリングストップもこちらに記載｡
 各マジックナンバーごとの各ポジションの情報を格納するeach_pos_info等
 EA開発を高速化することが可能｡
 
-# Pos_info_methods_ver1.03.mqh
+### Pos_info_methods_ver1.03.mqh
 Pos_infoのメソッドを記載｡
 
-# Silverman_sox_functions_ver2.00.mqh
+### Silverman_sox_functions_ver2.00.mqh
 エントリーロジック､複利計算の関数を記載｡
 
-# Silverman_sox_mult_ver2.00.mq5
+### Silverman_sox_mult_ver2.00.mq5
 メインコード｡
 上記のモジュールを利用してエントリー判定､取引、決済を行う｡
 MetaEditer5でコンパイルすることにより使用可能｡
